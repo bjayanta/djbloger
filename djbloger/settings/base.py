@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "blog",
 ]
 
 MIDDLEWARE = [
@@ -85,7 +86,7 @@ DATABASES = {
     # }
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "djblog",
+        "NAME": "djbloger",
         "USER": "root",
         "PASSWORD": "",
         "HOST": "localhost",

@@ -48,6 +48,7 @@ Step 1: Installation
 
 ```bash
 pip install pytest
+pip install pytest-cov
 ```
 
 Step 2: Create pytest.ini file
@@ -73,6 +74,18 @@ Step 4: Run test
 
 ```bash
 pytest
+```
+
+or
+
+```bash
+pytest --cov
+```
+
+or, Generate report (HTML) in root directory
+
+```bash
+pytest --cov-report html --cov=./
 ```
 
 ## Code formatter
@@ -137,6 +150,14 @@ Step 2: Goto settings file and configure
     "HOST": "localhost",
     "PORT": "3306",
 }
+```
+
+## Factory
+
+Step 1: Installation
+
+```bash
+pip install factory-boy
 ```
 
 Thank you.
