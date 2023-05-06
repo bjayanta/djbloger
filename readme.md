@@ -118,4 +118,25 @@ Step 5: Insert all the code bellow into the "settings.json" file
 }
 ```
 
+## MySQL Configure
+
+Step 1: Installation
+
+```bash
+pip install mysqlclient
+```
+
+Step 2: Goto settings file and configure
+
+```py
+"default": {
+    "ENGINE": "django.db.backends.mysql",
+    "NAME": "<database name>",
+    "USER": "<username>",
+    "PASSWORD": "<password>",
+    "HOST": "localhost",
+    "PORT": "3306",
+}
+```
+
 Thank you.
