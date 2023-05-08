@@ -49,6 +49,7 @@ Step 1: Installation
 ```bash
 pip install pytest
 pip install pytest-cov
+pip install pytest-factoryboy
 ```
 
 Step 2: Create pytest.ini file
@@ -158,6 +159,7 @@ Step 1: Installation
 
 ```bash
 pip install factory-boy
+
 ```
 
 Thank you.
