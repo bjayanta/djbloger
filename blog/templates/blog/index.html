@@ -1,6 +1,9 @@
-{% extends 'base.html' %} {% block title %}Index Page{% endblock %} {% block
-template %}
+{% extends 'base.html' %} 
+
+{% block title %} Index Page {% endblock %} 
+
+{% block template %}
 <section>
-  <h1>Hello Wolrd!</h1>
+  {% include 'blog/components/splash.html' %}
 </section>
 {% endblock %}
