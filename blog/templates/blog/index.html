@@ -4,6 +4,23 @@
 
 {% block template %}
 <section>
-  {% include 'blog/components/splash.html' %}
+	{% include 'blog/components/splash.html' %}
+
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-lg-8">
+				{% for post in posts %}
+					<a href="#">
+						<article class="card border-0 pb-3 pb-sm-5">
+							<h2>{{ post.title }}</h2>
+							<p>{{ post.content }}</p>
+						</article>
+					</a>
+				{% endfor %}
+			</div>
+
+			<div class="d-none d-lg-block col-4">b</div>
+		</div>
+	</div>
 </section>
 {% endblock %}
