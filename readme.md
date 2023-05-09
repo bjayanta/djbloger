@@ -162,4 +162,9 @@ pip install factory-boy
 
 ```
 
+```bash
+from blog.factory import PostFactory
+x = PostFactory.create_batch(100)
+```
+
 Thank you.
