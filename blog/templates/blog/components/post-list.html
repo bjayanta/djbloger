@@ -1,0 +1,28 @@
+{% for post in posts %}
+    {% if forloop.last %}
+    <a href="#" class="text-decoration-none" hx-get="{% url 'website.index' %}" hx-trigger="revealed">
+    {% else %}
+    <a href="#" class="text-decoration-none">
+    {% endif %}
+        <div class="card border-0 pb-3 pb-sm-5">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-8">
+                        <article>
+                            <p class="text-body">{{ post.author }}</p>
+                            <h1 class="mb-1 fs-4 text-body fw-bold">{{ post.title|truncatechars:80 }}</h1>
+                            <h2 class="text-muted fs-6 d-none d-sm-block">{{ post.subtitle }}</h2>
+                            <p class="text-muted">{{ post.updated_at|date:"M d" }}</p>
+                        </article>
+                    </div>
+
+                    <div class="col-4">
+                        <figure>
+                            <img src="https://picsum.photos/256/128" class="img-fluid float-end" alt="Article">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+{% endfor %}
