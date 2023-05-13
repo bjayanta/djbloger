@@ -1,15 +1,19 @@
 {% for post in posts %}
-    {% if forloop.last %}
-    <a href="#" class="text-decoration-none" hx-get="{% url 'website.index' %}" hx-trigger="revealed">
-    {% else %}
     <a href="#" class="text-decoration-none">
-    {% endif %}
+    {% if forloop.last %}
+        <div 
+            class="card border-0 pb-3 pb-sm-5" 
+            {% if page_obj.has_next %} hx-get="{% url 'website.index' %}?page={{ page_obj.number|add:1 }}" {% endif %}
+            hx-trigger="revealed"
+            hx-swap="afterend">
+    {% else %}
         <div class="card border-0 pb-3 pb-sm-5">
+    {% endif %}
             <div class="card-body">
                 <div class="row">
                     <div class="col-8">
                         <article>
-                            <p class="text-body">{{ post.author }}</p>
+                            <p class="text-body">{{ post.author }} {{ post.id }}</p>
                             <h1 class="mb-1 fs-4 text-body fw-bold">{{ post.title|truncatechars:80 }}</h1>
                             <h2 class="text-muted fs-6 d-none d-sm-block">{{ post.subtitle }}</h2>
                             <p class="text-muted">{{ post.updated_at|date:"M d" }}</p>
